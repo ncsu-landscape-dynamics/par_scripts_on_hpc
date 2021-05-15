@@ -10,5 +10,5 @@ module load openmpi-gcc
 conda activate /usr/local/usrapps/jmgray2/nfkruska_env
 ## this example uses mpi4py.futures to distribute jobs, so the call here
 ## reflects that in the -m argument.
-mpirun python -m mpi4py.futures ./test_py_mpi.py
+mpirun -n 1 python -m mpi4py.futures ./test_py_mpi.py
 conda deactivate
